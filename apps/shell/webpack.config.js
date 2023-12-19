@@ -55,6 +55,9 @@ module.exports = (_, argv) => ({
           singleton: true,
           requiredVersion: deps["react-dom"],
         },
+        "@career-up/ui-kit": {
+          singleton: true,
+        },
       },
     }),
     new HtmlWebPackPlugin({

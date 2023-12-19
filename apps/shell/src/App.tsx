@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./index.css";
+import "@career-up/ui-kit/index.css";
+import { Button } from "@career-up/ui-kit";
 
 const App = () => (
   <div className="container">
@@ -9,6 +10,9 @@ const App = () => (
     <div>Framework: react</div>
     <div>Language: TypeScript</div>
     <div>CSS: Empty CSS</div>
+    <div>
+      <Button />
+    </div>
   </div>
 );
 ReactDOM.render(<App />, document.getElementById("app"));
