@@ -1,0 +1,19 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 1.6rem;
+  padding: 0.6rem 1.6rem;
+  color: #0a66c2;
+  box-shadow: inset 0 0 0 1px #0a66c2;
+  border: none;
+  cursor: pointer;
+  min-height: 32px;
+  line-height: 20px;
+}
+
+.btn:hover {
+  background-color: rgba(112, 181, 249, 0.2);
+  box-shadow: inset 0 0 0 2px #0a66c2;
+}

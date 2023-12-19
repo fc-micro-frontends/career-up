@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "@career-up/ui-kit/index.css";
-import { Button } from "@career-up/ui-kit";
+import { Button, Icon } from "@career-up/ui-kit";
 
 const App = () => (
   <div className="container">
@@ -11,7 +11,10 @@ const App = () => (
     <div>Language: TypeScript</div>
     <div>CSS: Empty CSS</div>
     <div>
-      <Button />
+      <Button>Hello</Button>
+    </div>
+    <div>
+      <Icon.Briefcase />
     </div>
   </div>
 );
