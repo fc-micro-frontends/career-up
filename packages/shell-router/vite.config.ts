@@ -12,11 +12,12 @@ export default defineConfig({
       fileName: "index",
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react", "react-dom", "react-router-dom"],
       output: {
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
+          "react-router-dom": "ReactRouterDOM",
         },
       },
     },
