@@ -6,13 +6,18 @@ import {
 } from "react-router-dom";
 import Layout from "./components/layout";
 import { appPostingBasename } from "./constants/prefix";
+import { Auth0ProviderWithNavigator } from "./components/auth0-provider-with-navigator";
 
 const AppPostingLazy = React.lazy(() => import("./components/app-posting"));
 
 const browserRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: (
+      <Auth0ProviderWithNavigator>
+        <Layout />
+      </Auth0ProviderWithNavigator>
+    ),
     errorElement: <div>404 Not Found</div>,
     children: [
       {
