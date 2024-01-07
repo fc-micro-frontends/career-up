@@ -19,14 +19,12 @@ server.get("/user", (req, res) => {
 
 server.use(jsonServer.bodyParser);
 server.post("/posts", (req, res, next) => {
-  if (req.method === "POST") {
-    req.body.createdAt = new Date().toISOString();
-    req.body.author = {
-      name: req.user.name,
-      email: req.user.email,
-      picture: req.user.picture,
-    };
-  }
+  req.body.createdAt = new Date().toISOString();
+  req.body.author = {
+    name: req.user.name,
+    email: req.user.email,
+    picture: req.user.picture,
+  };
   next();
 });
 
