@@ -1,7 +1,7 @@
 import "./write-post.scss";
 
-import { Button } from "@career-up/ui-kit";
 import React, { useRef } from "react";
+import { Button } from "@career-up/ui-kit";
 
 interface WritePostProps {
   writePost: (message: string) => Promise<void>;

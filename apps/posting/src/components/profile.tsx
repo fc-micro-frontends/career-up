@@ -1,13 +1,13 @@
 import "./profile.scss";
 
-import { type User } from "@auth0/auth0-spa-js";
 import React, { useEffect, useState } from "react";
 import useAuth0Client from "../hooks/use-auth0-client";
 import { getUser } from "../apis";
+import { type UserType } from "../types";
 
 const Profile = () => {
   const auth0Client = useAuth0Client();
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<UserType | null>(null);
 
   useEffect(() => {
     (async () => {
