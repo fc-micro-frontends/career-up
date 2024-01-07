@@ -1,12 +1,12 @@
 import { type User } from "@auth0/auth0-spa-js";
 
 export interface PostType {
-  id: string;
+  id: number;
   message: string;
   createdAt: string;
   author: {
-    name: string;
     email: string;
+    name: string;
     picture: string;
   };
 }

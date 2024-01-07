@@ -12,7 +12,7 @@ const WritePost: React.FC<WritePostProps> = ({ writePost }) => {
   const onWriteClick = async () => {
     if (messageRef.current) {
       await writePost(
-        messageRef.current.value.replace(/(?:\r\n|\r|\n)/g, "<br>")
+        messageRef.current.value.replace(/(?:\r\n|\r|\n)/g, "<br />")
       );
       messageRef.current.value = "";
     }

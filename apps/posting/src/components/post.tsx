@@ -4,20 +4,21 @@ import React from "react";
 import { Button } from "@career-up/ui-kit";
 
 interface PostProps {
-  id: string;
+  id: number;
   author: {
     picture: string;
     name: string;
     email: string;
   };
   message: string;
-  deletePostById: (id: string) => void;
+  deletePostById: (id: number) => void;
 }
 
 const Post: React.FC<PostProps> = ({ id, author, message, deletePostById }) => {
   const onDeleteClick = () => {
     deletePostById(id);
   };
+
   return (
     <div className="posting--post">
       <div className="posting--post-profile">

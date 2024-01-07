@@ -24,7 +24,7 @@ const PageHome: React.FC = () => {
     })();
   }, [auth0Client]);
 
-  const deletePostById = async (id: string) => {
+  const deletePostById = async (id: number) => {
     try {
       const token = await auth0Client.getTokenSilently();
 

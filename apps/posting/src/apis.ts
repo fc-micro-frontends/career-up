@@ -7,8 +7,7 @@ export async function getPosts(token: string): Promise<PostType[]> {
     },
   });
 
-  const posts = await res.json();
-  return posts;
+  return await res.json();
 }
 
 export async function createPost(
@@ -18,14 +17,14 @@ export async function createPost(
   await fetch("http://localhost:4000/posts", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${token}`,
       "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(body),
   });
 }
 
-export async function removePost(token: string, id: string): Promise<void> {
+export async function removePost(token: string, id: number): Promise<void> {
   await fetch(`http://localhost:4000/posts/${id}`, {
     method: "DELETE",
     headers: {
