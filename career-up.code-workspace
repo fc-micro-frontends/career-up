@@ -1,0 +1,31 @@
+{
+  "folders": [
+    {
+      "name": "shell",
+      "path": "apps/shell"
+    },
+    {
+      "name": "posting",
+      "path": "apps/posting"
+    },
+    {
+      "name": "shell-router",
+      "path": "packages/shell-router"
+    },
+    {
+      "name": "ui-kit",
+      "path": "packages/ui-kit"
+    },
+    {
+      "name": "server",
+      "path": "server"
+    },
+    {
+      "name": "monorepo",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "monorepo/node_modules/typescript/lib"
+  }
+}

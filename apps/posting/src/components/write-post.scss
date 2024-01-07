@@ -1,0 +1,28 @@
+.posting--write-post {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: white;
+  padding: 16px 16px 16px;
+  gap: 20px;
+
+  .posting--write-post-textarea {
+    border-radius: 20px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    border: 1px solid rgb(0 0 0 / 0.5);
+
+    &:focus {
+      border: solid 2px #0a66c2;
+    }
+  }
+
+  .posting--write-post-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}

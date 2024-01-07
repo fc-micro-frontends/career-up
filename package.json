@@ -13,6 +13,7 @@
   "license": "ISC",
   "packageManager": "pnpm@8.10.0+sha1.77d568bacf41eeefd6695a7087c1282433955b5c",
   "devDependencies": {
-    "turbo": "^1.11.1"
+    "turbo": "^1.11.1",
+    "typescript": "5.2.2"
   }
 }

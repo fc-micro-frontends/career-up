@@ -1,0 +1,25 @@
+.posting--page-home {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin: 0 auto;
+  max-width: 1128px;
+  padding: 16px;
+
+  .posting--page-home-left {
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+  }
+
+  .posting--page-home-center {
+    display: flex;
+    flex-direction: column;
+    width: 555px;
+    gap: 10px;
+  }
+
+  .posting--page-home-right {
+    width: 300px;
+  }
+}

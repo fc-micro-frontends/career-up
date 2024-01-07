@@ -1,0 +1,36 @@
+.posting--post {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: white;
+  padding: 16px 16px 16px;
+  gap: 20px;
+
+  .posting--post-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    img {
+      width: 30px;
+    }
+
+    .posting--post-profile-text {
+      .posting--post-profile-name {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .posting--post-profile-email {
+        color: rgb(0 0 0/0.6);
+        font-size: 12px;
+      }
+    }
+  }
+
+  .posting--post-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
