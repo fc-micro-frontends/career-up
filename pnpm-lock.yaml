@@ -78,6 +78,9 @@ importers:
       css-loader:
         specifier: ^6.3.0
         version: 6.8.1(webpack@5.89.0)
+      dotenv-webpack:
+        specifier: ^8.0.1
+        version: 8.0.1(webpack@5.89.0)
       eslint:
         specifier: ^8.55.0
         version: 8.56.0
