@@ -14,7 +14,15 @@ server.use(async (req, res, next) => {
   }
 });
 server.get("/user", (req, res) => {
-  res.jsonp({ ...req.user, view_count: 249, update_count: 100 });
+  res.jsonp({
+    ...req.user,
+    view_count: 249,
+    update_count: 100,
+    courses: [
+      { courseId: 1, done: true },
+      { courseId: 4, done: false },
+    ],
+  });
 });
 
 server.use(jsonServer.bodyParser);

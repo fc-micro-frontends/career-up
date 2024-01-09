@@ -9,6 +9,10 @@
       "path": "apps/posting"
     },
     {
+      "name": "edu",
+      "path": "apps/edu"
+    },
+    {
       "name": "shell-router",
       "path": "packages/shell-router"
     },
