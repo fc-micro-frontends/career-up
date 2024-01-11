@@ -155,5 +155,67 @@
         "• 비용 효율적으로 웹성능을 높이기 위해선 페이지의 특성에 따라 적절한 렌더링 방식을 선택해야합니다. 다양한 목표와 규모의 4개 서비스를 만들어 보며 대표 렌더링 방식을 학습합니다."
       ]
     }
+  ],
+  "connections": [
+    {
+      "name": "Lee Woongjae",
+      "picture": "https://lh3.googleusercontent.com/a/ACg8ocLQFU3l4dhf-6T83mF9ZcQ3NKDK3my_nOKuUhoIml3AkCU=s96-c",
+      "role": "프론트엔드 개발자",
+      "networkCount": 102
+    },
+    {
+      "name": "이순신",
+      "picture": null,
+      "role": "백엔드 개발자",
+      "networkCount": 72
+    },
+    {
+      "name": "세종대왕",
+      "picture": null,
+      "role": "Project Manager",
+      "networkCount": 60
+    },
+    {
+      "name": "복댕이",
+      "picture": null,
+      "role": "푸들",
+      "networkCount": 50
+    },
+    {
+      "name": "Lucky",
+      "picture": null,
+      "role": "포메라니안",
+      "networkCount": 500
+    },
+    {
+      "name": "Lee Woongjae",
+      "picture": "https://lh3.googleusercontent.com/a/ACg8ocLQFU3l4dhf-6T83mF9ZcQ3NKDK3my_nOKuUhoIml3AkCU=s96-c",
+      "role": "프론트엔드 개발자",
+      "networkCount": 102
+    },
+    {
+      "name": "이순신",
+      "picture": null,
+      "role": "백엔드 개발자",
+      "networkCount": 72
+    },
+    {
+      "name": "세종대왕",
+      "picture": null,
+      "role": "Project Manager",
+      "networkCount": 60
+    },
+    {
+      "name": "복댕이",
+      "picture": null,
+      "role": "푸들",
+      "networkCount": 50
+    },
+    {
+      "name": "Lucky",
+      "picture": null,
+      "role": "포메라니안",
+      "networkCount": 500
+    }
   ]
 }
