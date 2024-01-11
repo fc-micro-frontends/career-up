@@ -217,5 +217,55 @@
       "role": "포메라니안",
       "networkCount": 500
     }
+  ],
+  "jobs": [
+    {
+      "id": 1,
+      "company": "토스증권 (Toss Securities)",
+      "position": "Frontend Developer (Web Trading System)",
+      "location": "대한민국 서울 서울 (대면근무)"
+    },
+    {
+      "id": 2,
+      "company": "imweb (아임웹)",
+      "position": "Front-end Engineer",
+      "location": "대한민국 서울 강남구 (대면근무)"
+    },
+    {
+      "id": 3,
+      "company": "Coupang",
+      "position": "Senior Web Engineer (Coupang play)",
+      "location": "대한민국 서울 (재택대면혼합근무)"
+    },
+    {
+      "id": 4,
+      "company": "Toss Bank(토스뱅크)",
+      "position": "Node.js Developer",
+      "location": "대한민국 서울 서울 (재택대면혼합근무)"
+    },
+    {
+      "id": 5,
+      "company": "토스증권 (Toss Securities)",
+      "position": "Frontend Developer (Web Trading System)",
+      "location": "대한민국 서울 서울 (대면근무)"
+    },
+    {
+      "id": 6,
+      "company": "imweb (아임웹)",
+      "position": "Front-end Engineer",
+      "location": "대한민국 서울 강남구 (대면근무)"
+    },
+    {
+      "id": 7,
+      "company": "Coupang",
+      "position": "Senior Web Engineer (Coupang play)",
+      "location": "대한민국 서울 (재택대면혼합근무)"
+    },
+    {
+      "id": 8,
+      "company": "Toss Bank(토스뱅크)",
+      "position": "Node.js Developer",
+      "location": "대한민국 서울 서울 (재택대면혼합근무)"
+    }
   ]
 }
