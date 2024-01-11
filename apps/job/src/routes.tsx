@@ -8,7 +8,7 @@ export const routes: RouteObject[] = [
     path: "/",
     element: (
       <Auth0ClientProvider>
-        <AppRoutingManager type="app-edu" />
+        <AppRoutingManager type="app-job" />
       </Auth0ClientProvider>
     ),
     errorElement: <div>App Job Error</div>,
