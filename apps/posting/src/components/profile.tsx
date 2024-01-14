@@ -1,9 +1,9 @@
 import "./profile.scss";
 
 import React, { useEffect, useState } from "react";
-import useAuth0Client from "../hooks/use-auth0-client";
 import { getUser } from "../apis";
 import { type UserType } from "../types";
+import { useAuth0Client } from "@career-up/shell-router";
 
 const Profile = () => {
   const auth0Client = useAuth0Client();

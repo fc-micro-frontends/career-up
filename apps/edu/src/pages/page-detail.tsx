@@ -4,11 +4,11 @@ import { selectAtom } from "jotai/utils";
 import { coursesAtom } from "../atoms";
 import { useAtomValue } from "jotai";
 import CourseDetailItem from "../components/course-detail-item";
-import useAuth0Client from "../hooks/use-auth0-client";
 import { getCourseContents } from "../apis";
 import { type CourseContentsType } from "../types";
 import CourseContents from "../components/course-contents";
 import CourseActions from "../components/course-actions";
+import { useAuth0Client } from "@career-up/shell-router";
 
 const PageDetail = () => {
   const { id } = useParams<{ id: string }>();
