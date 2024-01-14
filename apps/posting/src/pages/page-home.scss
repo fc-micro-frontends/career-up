@@ -21,5 +21,8 @@
 
   .posting--page-home-right {
     width: 300px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
   }
 }

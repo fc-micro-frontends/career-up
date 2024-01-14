@@ -1,12 +1,20 @@
 import "./page-home.scss";
 
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Profile from "../components/profile";
 import { PostType } from "../types";
 import { createPost, getPosts, removePost } from "../apis";
 import Post from "../components/post";
 import WritePost from "../components/write-post";
 import { useAuth0Client } from "@career-up/shell-router";
+
+const RecommendConnectionsContainer = React.lazy(
+  () => import("fragment_recommend_connections/container")
+);
+
+const RecommendJobsContainer = React.lazy(
+  () => import("job/fragment-recommend-jobs")
+);
 
 const PageHome: React.FC = () => {
   const auth0Client = useAuth0Client();
@@ -61,7 +69,14 @@ const PageHome: React.FC = () => {
           <Post key={post.id} {...post} deletePostById={deletePostById} />
         ))}
       </div>
-      <div className="posting--page-home-right"></div>
+      <div className="posting--page-home-right">
+        <Suspense fallback={<div>Loading...</div>}>
+          <RecommendConnectionsContainer />
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <RecommendJobsContainer />
+        </Suspense>
+      </div>
     </div>
   );
 };
