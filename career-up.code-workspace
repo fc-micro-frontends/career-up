@@ -21,6 +21,10 @@
       "path": "apps/job"
     },
     {
+      "name": "fragment-recommend-connections",
+      "path": "fragments/fragment-recommend-connections"
+    },
+    {
       "name": "shell-router",
       "path": "packages/shell-router"
     },

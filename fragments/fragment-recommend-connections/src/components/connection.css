@@ -1,0 +1,12 @@
+.fragment-recommend-connections--connection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fragment-recommend-connections--connection-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0 0 0 / 0.9);
+}
