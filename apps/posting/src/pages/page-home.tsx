@@ -7,18 +7,30 @@ import { createPost, getPosts, removePost } from "../apis";
 import Post from "../components/post";
 import WritePost from "../components/write-post";
 import { useAuth0Client } from "@career-up/shell-router";
-
-const RecommendConnectionsContainer = React.lazy(
-  () => import("fragment_recommend_connections/container")
-);
-
-const RecommendJobsContainer = React.lazy(
-  () => import("job/fragment-recommend-jobs")
-);
+import { ErrorBoundary } from "react-error-boundary";
+import { importRemote } from "@module-federation/utilities";
 
 const PageHome: React.FC = () => {
   const auth0Client = useAuth0Client();
   const [posts, setPosts] = useState<PostType[]>([]);
+
+  const RecommendConnectionsContainer = React.lazy(() =>
+    importRemote({
+      url: "http://localhost:5001",
+      scope: "fragment_recommend_connections",
+      module: "container",
+      remoteEntryFileName: `remoteEntry.js?v=${Date.now()}`,
+    })
+  );
+
+  const RecommendJobsContainer = React.lazy(() =>
+    importRemote({
+      url: "http://localhost:3004",
+      scope: "job",
+      module: "fragment-recommend-jobs",
+      remoteEntryFileName: `remoteEntry.js?v=${Date.now()}`,
+    })
+  );
 
   useEffect(() => {
     (async () => {
@@ -70,12 +82,16 @@ const PageHome: React.FC = () => {
         ))}
       </div>
       <div className="posting--page-home-right">
-        <Suspense fallback={<div>Loading...</div>}>
-          <RecommendConnectionsContainer />
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          <RecommendJobsContainer />
-        </Suspense>
+        <ErrorBoundary fallback={<div>Error</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <RecommendConnectionsContainer />
+          </Suspense>
+        </ErrorBoundary>
+        <ErrorBoundary fallback={<div>Error</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <RecommendJobsContainer />
+          </Suspense>
+        </ErrorBoundary>
       </div>
     </div>
   );

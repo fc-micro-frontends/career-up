@@ -44,8 +44,10 @@
     "@babel/runtime": "^7.23.6",
     "@career-up/shell-router": "workspace:*",
     "@career-up/ui-kit": "workspace:*",
+    "@module-federation/utilities": "^3.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.12",
     "react-router-dom": "^6.21.1"
   }
 }

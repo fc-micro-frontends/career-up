@@ -4,7 +4,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
-    "build:start": "cd dist && PORT=3000 npx serve",
+    "build:start": "cd dist && PORT=3000 npx serve -s",
     "start": "webpack serve --open --mode development",
     "start:live": "webpack serve --open --mode development --live-reload --hot"
   },
@@ -40,6 +40,7 @@
     "@babel/runtime": "^7.23.6",
     "@career-up/shell-router": "workspace:*",
     "@career-up/ui-kit": "workspace:*",
+    "@module-federation/utilities": "^3.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1"
