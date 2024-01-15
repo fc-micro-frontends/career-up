@@ -1,7 +1,6 @@
 import "./page-home.scss";
 
 import React, { Suspense, useEffect, useState } from "react";
-import Profile from "../components/profile";
 import { PostType } from "../types";
 import { createPost, getPosts, removePost } from "../apis";
 import Post from "../components/post";
@@ -9,6 +8,7 @@ import WritePost from "../components/write-post";
 import { useAuth0Client } from "@career-up/shell-router";
 import { ErrorBoundary } from "react-error-boundary";
 import { importRemote } from "@module-federation/utilities";
+import ProfileContainer from "../containers/profile-container";
 
 const PageHome: React.FC = () => {
   const auth0Client = useAuth0Client();
@@ -73,7 +73,7 @@ const PageHome: React.FC = () => {
   return (
     <div className="posting--page-home">
       <div className="posting--page-home-left">
-        <Profile />
+        <ProfileContainer />
       </div>
       <div className="posting--page-home-center">
         <WritePost writePost={writePost} />
