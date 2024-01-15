@@ -1,31 +1,26 @@
-import React, { useCallback, useState } from "react";
-import { ConnectionType } from "../types";
+import React from "react";
 import { useAuth0Client } from "@career-up/shell-router";
-import { getConnections } from "../apis";
 import RecommendConnections from "../components/recommend-connections";
+import useSWR from "swr";
+
+const SERVER_URL = process.env.REACT_APP_SERVER_URL!;
 
 const RecommendConnectionsContainer: React.FC = () => {
   const auth0Client = useAuth0Client();
-  const [connections, setConnections] = useState<ConnectionType[]>([]);
 
-  const fetchConnections = useCallback(async () => {
-    (async () => {
-      try {
-        const token = await auth0Client.getTokenSilently();
-        const connections = await getConnections(token);
-        setConnections(connections);
-      } catch (error) {
-        alert(error);
-      }
-    })();
-  }, [auth0Client]);
+  const { data } = useSWR("/connections?_limit=3", async (url) => {
+    const token = await auth0Client.getTokenSilently();
 
-  return (
-    <RecommendConnections
-      connections={connections}
-      fetchConnections={fetchConnections}
-    />
-  );
+    const res = await fetch(`${SERVER_URL}${url}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    return await res.json();
+  });
+
+  return <RecommendConnections connections={data ?? []} />;
 };
 
 export default RecommendConnectionsContainer;

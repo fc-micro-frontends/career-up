@@ -67,6 +67,9 @@ module.exports = (_, argv) => ({
         "@career-up/ui-kit": {
           singleton: true,
         },
+        swr: {
+          version: deps["swr"],
+        },
       },
     }),
     new HtmlWebPackPlugin({
