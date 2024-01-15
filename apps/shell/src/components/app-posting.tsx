@@ -19,7 +19,7 @@ export default function AppPosting() {
     }
     isFirstRunRef.current = false;
     importRemote<{ default: InjectFuncType }>({
-      url: "http://localhost:3001",
+      url: process.env.REACT_APP_MICROAPP_POSTING!,
       scope: "posting",
       module: "injector",
       remoteEntryFileName: `remoteEntry.js`,

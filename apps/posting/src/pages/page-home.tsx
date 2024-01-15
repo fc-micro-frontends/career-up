@@ -16,7 +16,7 @@ const PageHome: React.FC = () => {
 
   const RecommendConnectionsContainer = React.lazy(() =>
     importRemote({
-      url: "http://localhost:5001",
+      url: process.env.REACT_APP_FRAGMENT_RECOMMEND_CONNECTIONS!,
       scope: "fragment_recommend_connections",
       module: "container",
       remoteEntryFileName: `remoteEntry.js?v=${Date.now()}`,
@@ -25,7 +25,7 @@ const PageHome: React.FC = () => {
 
   const RecommendJobsContainer = React.lazy(() =>
     importRemote({
-      url: "http://localhost:3004",
+      url: process.env.REACT_APP_MICROAPP_JOB!,
       scope: "job",
       module: "fragment-recommend-jobs",
       remoteEntryFileName: `remoteEntry.js?v=${Date.now()}`,

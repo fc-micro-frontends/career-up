@@ -1,7 +1,9 @@
 import { type ConnectionType, type MyNetworkType } from "./types";
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL!;
+
 export async function getMyNetwork(token: string): Promise<MyNetworkType> {
-  const res = await fetch("http://localhost:4000/my-network", {
+  const res = await fetch(`${SERVER_URL}/my-network`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -11,7 +13,7 @@ export async function getMyNetwork(token: string): Promise<MyNetworkType> {
 }
 
 export async function getConnections(token: string): Promise<ConnectionType[]> {
-  const res = await fetch("http://localhost:4000/connections", {
+  const res = await fetch(`${SERVER_URL}/connections`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

@@ -47,11 +47,7 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "posting",
       filename: "remoteEntry.js",
-      remotes: {
-        fragment_recommend_connections:
-          "fragment_recommend_connections@http://localhost:5001/remoteEntry.js",
-        job: "job@http://localhost:3004/remoteEntry.js",
-      },
+      remotes: {},
       exposes: {
         "./injector": "./src/injector.tsx",
       },

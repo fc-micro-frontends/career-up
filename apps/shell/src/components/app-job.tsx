@@ -19,7 +19,7 @@ export default function AppJob() {
     }
     isFirstRunRef.current = false;
     importRemote<{ default: InjectFuncType }>({
-      url: "http://localhost:3004",
+      url: process.env.REACT_APP_MICROAPP_JOB!,
       scope: "job",
       module: "injector",
       remoteEntryFileName: `remoteEntry.js`,

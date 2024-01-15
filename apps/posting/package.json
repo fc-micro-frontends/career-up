@@ -2,9 +2,9 @@
   "name": "@career-up/posting",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack --mode production",
-    "build:dev": "webpack --mode development",
-    "build:start": "cd dist && PORT=3001 npx serve",
+    "build": "pnpm -w build:packages && webpack --mode production",
+    "build:dev": "pnpm -w build:packages && webpack --mode development",
+    "build:start": "cd dist && PORT=3001 npx serve -s",
     "start": "webpack serve --open --mode development",
     "start:live": "webpack serve --open --mode development --live-reload --hot"
   },

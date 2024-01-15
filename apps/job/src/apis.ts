@@ -1,7 +1,9 @@
 import { type ApplyStatusType, type JobType } from "./types";
 
+const SERVER_URL = process.env.REACT_APP_SERVER_URL!;
+
 export async function getJobs(token: string): Promise<JobType[]> {
-  const res = await fetch(`http://localhost:4000/jobs`, {
+  const res = await fetch(`${SERVER_URL}/jobs`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -11,7 +13,7 @@ export async function getJobs(token: string): Promise<JobType[]> {
 }
 
 export async function getApplyStatus(token: string): Promise<ApplyStatusType> {
-  const res = await fetch("http://localhost:4000/apply-status", {
+  const res = await fetch(`${SERVER_URL}/apply-status`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
